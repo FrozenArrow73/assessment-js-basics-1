@@ -50,7 +50,23 @@ const pinkPrice = .55
 */
 
 // CODE HERE
+let totalAcres = 0
 
+//using three functionally idental for loops to loop through each array and add the number of acres to totalAcres
+
+for(i = 0; i < fujiAcres.length; i++){
+    totalAcres += fujiAcres[i]
+}
+
+for(i = 0; i < galaAcres.length; i++){
+    totalAcres += galaAcres[i]
+}
+
+for(i = 0; i < pinkAcres.length; i++){
+    totalAcres += pinkAcres[i]
+}
+
+console.log(totalAcres)
 
 
 
@@ -69,6 +85,10 @@ const pinkPrice = .55
 
 // CODE HERE
 
+// deviding the total acres by 7 for the full week that apples were picked
+let averageDailyAcres = 0
+averageDailyAcres = totalAcres / 7
+console.log(averageDailyAcres)
 
 
 
@@ -106,8 +126,17 @@ let acresLeft = 174
 let days = 0
 
 // CODE HERE
-
-
+/*
+Calculating days left withough a remainder.
+on each loop we subtract the avrage daily acers we pick
+and add 1 day to our count of the total days it will take us
+to pick the remaining apples.
+*/
+while(acresLeft > 0){
+    acresLeft -= averageDailyAcres
+    days++
+}
+console.log(days)
 
 // PROBLEM 4
 
@@ -135,10 +164,22 @@ let days = 0
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+let fujiTons = fujiAcres.slice(0, fujiAcres.length)
+let galaTons = galaAcres.slice(0, galaAcres.length)
+let pinkTons = pinkAcres.slice(0, pinkAcres.length)
 
+/* I realized that each array had the same length so instead of making 3 loops
+this time I instead put them all into the same loop of equal to their lengths which is 7
+*/
+for (i = 0; i < 7; i++) {
+    fujiTons[i] = fujiTons[i] * 6.5
+    galaTons[i] = galaTons[i] * 6.5
+    pinkTons[i] = pinkTons[i] * 6.5
+}
+
+console.log(fujiTons)
+console.log(galaTons)
+console.log(pinkTons)
 
 
 
@@ -162,9 +203,25 @@ let days = 0
 
 // CODE HERE 
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+/*
+I began by initializing the pounds to 0 and then looping through all three arra.s
+Each loop I would get that day's tons of apples and multiply it by 2000 to convert 
+to pounds and add the to the running total.
+*/
+ let fujiPounds = 0;
+ let galaPounds = 0;
+ let pinkPounds = 0
+
+for (i = 0; i < 7; i++) {
+ fujiPounds += fujiTons[i] * 2000
+ galaPounds += galaTons[i] * 2000
+ pinkPounds += pinkTons[i] * 2000
+}
+
+console.log(fujiPounds)
+console.log(galaPounds)
+console.log(pinkPounds)
+
 
 
 
@@ -189,10 +246,13 @@ let days = 0
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = fujiPounds * fujiPrice
+let galaProfit = galaPounds * galaPrice
+let pinkProfit = pinkPounds * pinkPrice
 
+console.log(fujiProfit)
+console.log(galaProfit)
+console.log(pinkProfit)
 
 
 
@@ -209,3 +269,6 @@ let days = 0
 */
 
 // CODE HERE
+
+totalProfit =galaProfit + fujiProfit + pinkProfit
+console.log(`Total Profit: $${totalProfit}.00`)
