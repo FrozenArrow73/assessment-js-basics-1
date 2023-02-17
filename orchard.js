@@ -85,7 +85,7 @@ console.log(totalAcres)
 
 // CODE HERE
 
-// deviding the total acres by 7 for the full week that apples were picked
+// calculating the averageDailyAcers by deviding the total Acres by 7 which is the number of days that apples were picked
 let averageDailyAcres = 0
 averageDailyAcres = totalAcres / 7
 console.log(averageDailyAcres)
@@ -168,8 +168,9 @@ let fujiTons = fujiAcres.slice(0, fujiAcres.length)
 let galaTons = galaAcres.slice(0, galaAcres.length)
 let pinkTons = pinkAcres.slice(0, pinkAcres.length)
 
-/* I realized that each array had the same length so instead of making 3 loops
-this time I instead put them all into the same loop of equal to their lengths which is 7
+/* I realized that each array had the same length so instead of making 3 loops,
+this time, I instead put them all into the same loop equal to their lengths which is 7.
+I then multiplied each array by 6.5; the amount of tons of apples per each acre
 */
 for (i = 0; i < 7; i++) {
     fujiTons[i] = fujiTons[i] * 6.5
@@ -204,7 +205,7 @@ console.log(pinkTons)
 // CODE HERE 
 
 /*
-I began by initializing the pounds to 0 and then looping through all three arra.s
+I began by initializing the pounds to 0 and then looping through all three arrays.
 Each loop I would get that day's tons of apples and multiply it by 2000 to convert 
 to pounds and add the to the running total.
 */
@@ -246,6 +247,8 @@ console.log(pinkPounds)
 
 // CODE HERE
 
+//for each type of apple I multiply pounds by price to calculate profit.
+
 let fujiProfit = fujiPounds * fujiPrice
 let galaProfit = galaPounds * galaPrice
 let pinkProfit = pinkPounds * pinkPrice
@@ -269,6 +272,8 @@ console.log(pinkProfit)
 */
 
 // CODE HERE
+
+//To calculate total profit I add the profit from each type of apple together.
 
 totalProfit =galaProfit + fujiProfit + pinkProfit
 console.log(`Total Profit: $${totalProfit}.00`)
