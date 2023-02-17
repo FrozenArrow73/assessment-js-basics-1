@@ -10,6 +10,7 @@
 */
 
 //CODE HERE
+let gitDefinition = "a version control program that you can use to save copies of your program. creating a timeline of your development and the ability to easily revert your code to an earlier copy"
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -19,6 +20,8 @@
 
 //CODE HERE
 
+let gitHubDefinition = "GitHub is an online cloud service where you can create a git repository. that way if something happens to your local git files or your computer, you can make a copy from GitHub"
+
 //////////////////PROBLEM 3////////////////////
 /*
     Create a variable called 'gitInitDefinition'.  
@@ -26,6 +29,7 @@
 */
 
 //CODE HERE
+let gitInitDefinition = "Git init is a command you can use in the terminal to initialize a git repository for your code"
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -34,6 +38,7 @@
 */
 
 //CODE HERE
+let gitCloneDefinition = "git clone is a command you can use in the terminal to clone a copy of your git or github repository"
 
 //////////////////PROBLEM 5////////////////////
 /*
@@ -42,6 +47,7 @@
 */
 
 //CODE HERE
+let gitStatusDefinition = "git status is a command you can use in the terminal to check the status of your git repository it provides valueable information like what files have been staged"
 
 //////////////////PROBLEM 6////////////////////
 /*
@@ -53,6 +59,8 @@
 */
 
 //CODE HERE
+let gitAddDefinition = "git add is a command you can use in the terminal to add a file to the stageing area ready to be commited"
+let gitaddcode = "git add ."
 
 //////////////////PROBLEM 7////////////////////
 /*
@@ -64,7 +72,8 @@
 */
 
 //CODE HERE
-
+let gitCommitDefinition = "git commit offically commits all your files that you have stages into the git repository"
+let gitCommitCode = 'git commit -m "initial commit"'
 
 //////////////////PROBLEM 8////////////////////
 /*
@@ -73,3 +82,4 @@
 */
 
 //CODE HERE
+let gitPushDefinition = "git push is a command you can use in the terminal to update your github repository with the lastest version of your local git repository"
